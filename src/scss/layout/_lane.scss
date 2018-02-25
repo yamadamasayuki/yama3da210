@@ -1,0 +1,131 @@
+// LANE.SCSS
+
+.l-lane {
+	height: 4500px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	&__side {
+		width: 76px;
+		height: 100%;
+		background-color: $gray;
+		& + & {
+			margin-left: 65px;
+		}
+	}//.l-lane__side
+
+	&__bowl {
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		animation: rotation .6s linear infinite;
+		svg,
+		img {
+			width: 150px;
+			height: 150px;
+		}
+		&--r {
+			top: 0;
+			right: 0;
+		}//.l-lane__bowl--item1
+		&--l {
+			bottom: 0;
+			left: 0;
+		}//.l-lane__bowl--item1
+		&.is-red {
+			background-image: url(/common/image/bowl_red.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+		}
+		&.is-blue {
+			background-image: url(/common/image/bowl_blue.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+		}
+		&.is-green {
+			background-image: url(/common/image/bowl_green.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+		}
+		&.is-yellow {
+			background-image: url(/common/image/bowl_yellow.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+		}
+	}//.l-lane__bowl
+
+	&__pin {
+	}//.l-lane__pin
+
+	&--l {
+		margin-left: percentage(-170 / 1200);
+		padding: 0 150px;
+		position: absolute;
+		// top: 0;
+		top: percentage(2529 / 5633);
+		left: -367px;//.l-laneの幅 + ボールの幅
+		transform: rotate(-30deg);
+		transform-origin: left top;
+	}//.l-lane--l
+	&--r {
+		margin-right: percentage(-170 / 1200);
+		padding: 0 150px;
+		position: absolute;
+		top: 0;
+		right: -130px;
+		transform: rotate(30deg);
+		transform-origin: right top;
+	}//.l-lane--r
+}//.l-lane
+
+.l-pin {
+	width: 43.42 * 2px;
+	height: 140.64px;
+	position: absolute;
+	top: 25%;
+	.l-lane--l & {
+		right: 150px - (43.42 * 2);
+		// right: 0;
+		transform: rotate(30deg);
+	}
+	.l-lane--r & {
+		left: 150 - 140.64px;
+		transform: rotate(-30deg);
+	}
+
+	&__body {
+		position: relative;
+	}//.l-pin__body
+
+	&__item {
+		width: 43.42px;
+		height: 140.64px;
+		background-image: url(/common/image/pin_red.svg);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: 43.42px 140.64px;
+		opacity: 0;
+		&--item1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			.is-popping & {
+				animation: popping1 1s 1.3s $ease-out-expo 1;
+			}
+		}//.l-pin__item--item1
+		&--item2 {
+			position: absolute;
+			top: 0;
+			right: 0;
+			.is-popping & {
+				animation: popping2 1s 1.3s $ease-out-expo 1;
+			}
+		}//.l-pin__item--item2
+	}//.l-pin__item
+}//.l-pin

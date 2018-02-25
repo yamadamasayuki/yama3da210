@@ -1,0 +1,68 @@
+// FOOTER.SCSS
+
+.l-footer {
+	padding-left: $header-width-pc;
+
+	&__reserve {
+		height: 195px;
+		overflow: hidden;
+
+		a {
+			display: block;
+			width: 1042 * 12px;
+			height: 100%;
+			padding-top: 38px;
+			padding-bottom: 46px;
+			background-image: url(/common/image/txt_reserve.svg);
+			background-repeat: repeat-x;
+			background-size: 1042px 111px;
+			background-position: left top 38px;
+			background-color: $green;
+			animation: reserve 12s infinite linear;
+			@include pc {
+				&:hover {
+					animation: reserve 12s infinite linear, reserveColor 2.4s steps(1, start) infinite;
+				}
+			}
+		}
+	}//.l-footer__reserve
+
+	&__body {
+		padding-top: 86px;
+		padding-bottom: 71px;
+		position: relative;
+	}//.l-footer__body
+
+	&__share {
+		margin-left: -46px;
+		margin-bottom: 80px;
+	}//.l-footer__share
+
+	&__ttl {
+		@include ENfont;
+		@include fz(21,21);
+		text-align: center;
+		letter-spacing: .2em;
+		margin-bottom: 46px;
+	}//.l-footer__ttl
+
+	&__copyright {
+		@include ENfont;
+		@include fz(13,20);
+		letter-spacing: .3em;
+		padding: 0 32px;
+	}//.l-footer__copyright
+
+	&__logo {
+		width: 186.083px;
+		height: 28px;
+		position: absolute;
+		bottom: 163px;
+		right: -59px;
+		z-index: z(header);
+		transform: rotate(-90deg);
+		img {
+			width: 100%;
+		}
+	}//.l-footer__logo
+}//.l-footer

@@ -1,0 +1,105 @@
+// HEADER.SCSS
+
+.l-header {
+	width: $header-width-pc;
+	height: 100vh;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: z(header);
+
+	&__body {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}//.l-header__body
+
+	&__menu {
+		width: 100%;
+		height: 120px;
+		@include centerPos;
+
+		p {
+			@include ENfont;
+			@include fz(18,44);
+			text-align: center;
+			letter-spacing: .5em;
+			padding-left: .5em;
+			position: relative;
+			transform: rotate(-90deg);
+			transform-origin: center;
+			&:after {
+				content: '';
+				display: block;
+				width: 44px;
+				height: 44px;
+				margin: auto;
+				background-color: $green;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+			span {
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}//.l-header__menu
+
+	&__tel {
+		@include ENfont;
+		@include fz(17,17);
+		letter-spacing: .25em;
+		white-space: nowrap;
+		margin: auto;
+		transform: rotate(-90deg);
+		position: absolute;
+		top: 107px;
+		left: 0;
+		right: 0;
+	}//.l-header__tel
+
+	&__sns {
+		width: 100%;
+		position: absolute;
+		bottom: 21px;
+		left: 0;
+	}//.l-header__sns
+}//.l-header
+
+
+
+.l-toggle {
+	width: 44px;
+	height: 44px;
+	margin: 35 - 13px auto 0;
+
+	&__body {
+		font-size: 0;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		& > span {
+			display: block;
+			width: 26px;
+			height: 1px;
+			background-color: #000;
+			@include centerPos;
+		}
+	}//.l-toggle__body
+
+	&__top {
+		transform: translateY(-7px);
+	}//.l-toggle__top
+
+	&__mid {
+	}//.l-toggle__mid
+
+	&__btm {
+		transform: translateY(7px);
+	}//.l-toggle__btm
+}//.l-toggle
+

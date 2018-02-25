@@ -1,0 +1,168 @@
+//@mixin fz($size)
+//==================================================
+@mixin fz($size:16,$lh:32) {
+	font-size: $size * 1px;
+	font-size: ( $size / 16 ) * 1rem;
+	line-height: $lh / $size;
+}
+
+//@mixin Font
+//==================================================
+
+//Japanese
+@mixin JPfont {
+	font-family:  'Hiragino Kaku Gothic ProN', 'HiraKakuProN-W3', 'Meiryo', sans-serif;
+	font-style: normal;
+}
+
+//English
+@mixin ENfont {
+	font-family:  'Barlow Condensed', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+
+// //Roboto Light
+// @mixin RobotoL {
+// 	font-family: 'Roboto', sans-serif;
+// 	font-style: normal;
+// 	font-weight: 300;
+// }
+//
+// //Roboto Reguler
+// @mixin RobotoR {
+// 	font-family: 'Roboto', sans-serif;
+// 	font-style: normal;
+// 	font-weight: 400;
+// }
+//
+// //Roboto Medium
+// @mixin RobotoM {
+// 	font-family: 'Roboto', sans-serif;
+// 	font-style: normal;
+// 	font-weight: 500;
+// }
+//
+// //Roboto Bold
+// @mixin RobotoB {
+// 	font-family: 'Roboto', sans-serif;
+// 	font-style: normal;
+// 	font-weight: 700;
+// }
+
+
+
+//@mixin mobile
+//==================================================
+@mixin mobile {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media screen and (min-width: 769px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (min-width: 769px) and (max-width: 1280px) {
+		@content;
+	}
+}
+@mixin wide {
+	@media screen and (min-width: 1281px) {
+		@content;
+	}
+}
+
+//@mixin e($name)/m($name)
+//==================================================
+@mixin e($name) {
+	@at-root &__#{$name} {
+		@content;
+	}
+}
+
+@mixin m($name) {
+	@at-root &--#{$name} {
+		@content;
+	}
+}
+
+
+
+//@mixin clearfix
+//==================================================
+@mixin clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+	}
+}
+
+
+
+// position
+//==================================================
+
+@mixin centerPos {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+
+// z-index
+//==================================================
+
+// COMMON
+// CONTENTS
+$toppage: (
+	content,
+	next,
+	active,
+	prev,
+	ttl,
+	header
+);
+
+@function z($name) {
+	@return index($toppage, $name);
+}
+
+
+
+//@mixin hover
+//==================================================
+
+@mixin alpha {
+	transition: 0.3s ease;
+
+	@include pc {
+		&:hover {
+			opacity: 0.8;
+		}
+	}//pc
+}//alpha
+
+
+
+
+//@mixin transform
+//==================================================
+
+@mixin easing($easeTime:.5, $easing:$ease-out-expo) {
+	transition: $easeTime + s $easing;
+}
+
+
+

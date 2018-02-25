@@ -1,0 +1,89 @@
+// KEYFRAMES.SCSS
+
+@keyframes mvHide {
+	to {
+		width: 0;
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes moveDown {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: 100%;
+	}
+}
+
+@keyframes moveUp {
+	0% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 100%;
+	}
+}
+
+@keyframes popping1 {
+	0% {
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50px,-340px) rotate(-45deg);
+	}
+}
+
+@keyframes popping2 {
+	0% {
+		opacity: 0;
+		transform: translate(0,0);
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(150px,-160px) rotate(90deg);
+	}
+}
+
+@keyframes reserve {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-25%);
+	}
+}
+
+@keyframes reserveColor {
+	0% {
+		background-color: $green;
+	}
+	25% {
+		background-color: $red;
+	}
+	50% {
+		background-color: $blue;
+	}
+	75% {
+		background-color: $yellow;
+	}
+	100% {
+		background-color: $green;
+	}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "yama3da210",
+  "version": "2.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "evoworx",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yamadamasayuki/yama3da210.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "css-mqpacker": "^5.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "npm-check-updates": "^2.14.0",
+    "update": "^0.7.4"
+  },
+  "babel": {
+    "sourceMaps": "false",
+    "presets": [
+      "latest"
+    ],
+    "ignore": [
+      "src/js/plugins/"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.1",
+    "babel-plugin-transform-strict-mode": "^6.24.1",
+    "update": "^0.7.4"
+  },
+  "keywords": [],
+  "description": ""
+}

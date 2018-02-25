@@ -1,0 +1,37 @@
+// UTILITY.SCSS
+
+/* PC or SP
+------------------------------ */
+.u-pc {
+	display: none !important;
+
+	@include pc {
+		display: block !important;
+	}
+}
+
+.u-sp {
+	display: block !important;
+
+	@include pc {
+		display: none !important;
+	}
+}
+
+br.u-pc,
+span.u-pc {
+	display: none !important;
+
+	@include pc {
+		display: inline !important;
+	}
+}
+
+br.u-sp,
+span.u-sp {
+	display: inline !important;
+
+	@include pc {
+		display: none !important;
+	}
+}
